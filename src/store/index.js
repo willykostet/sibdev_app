@@ -1,8 +1,9 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import axios from "axios";
+import {key} from '../fakeDB/api_key'
 Vue.use(Vuex);
-const API_KEY = process.env.VUE_APP_API_KEY;
+// const API_KEY = 'AIzaSyDULfXk5YXHxAUCtxsmKDwBUS50ny4N9rk';
 const url = "https://www.googleapis.com/youtube/v3";
 export default new Vuex.Store({
   state: {
@@ -64,7 +65,7 @@ export default new Vuex.Store({
           }`,
           {
             params: {
-              key: API_KEY,
+              key: key,
               type: "video",
               part: "snippet",
               maxResults: payload.maxVal || 12,
@@ -81,7 +82,7 @@ export default new Vuex.Store({
       return await axios
         .get(`${url}/videos`, {
           params: {
-            key: API_KEY,
+            key: key,
             id: payload,
             part: "statistics",
           },

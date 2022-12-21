@@ -6,9 +6,9 @@ $secondary:#35A2EC;
 $lightern-blue:rgba(19, 144, 229, 0.8);
 $gray:rgba(197, 228, 249, 0.3);
 $white: #FFF;
-$semi-white: #FFF;
+$semi-white: #f7f6f6;
 $light-blue: #75C7FF;
-$light-black: rgba(39, 39, 39, 0.3);
+$light-black: rgba(39, 39, 39, 0.2);
 $dark-blue: rgba(23, 23, 25, 0.2);
 $border-black: rgba(0, 0, 0, 0.128);
 
@@ -45,7 +45,7 @@ $border-black: rgba(0, 0, 0, 0.128);
   
   .search-page {
     width: 100%;
-    background: #f7f6f6;
+    background: $semi-white;
     min-height: 100vh;
     position: relative;
   }
